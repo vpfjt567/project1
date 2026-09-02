@@ -6,14 +6,14 @@ body{
 header {width: 1140px; 
     height: 140px;
     margin: 0 auto;
-    background-color: gold;  
+    /* background-color: gold;   */
 
 
 }
 
 footer {width: 1140px; 
     height: 150px;
-    background-color: blue;
+    /* background-color: blue; */
     margin: 0 auto; 
 
 
@@ -33,7 +33,7 @@ footer {width: 1140px;
           Arial,
           sans-serif;
         font-size: 14px;
-        color: #fff;
+        color: #333;
         margin: 0;
         padding: 0;
       }

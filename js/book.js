@@ -3,7 +3,8 @@ async function fetchBooks(query) {
     const REST_API_KEY = "fabf0d15ab33e4263ed790e6c0483958";
     const params = new URLSearchParams({
         target: 'title',
-        query
+        query,
+        size:20
     })
 
     const url = `https://dapi.kakao.com/v3/search/book?${params}`
@@ -25,14 +26,15 @@ async function fetchBooks(query) {
     return await response.json();
 }
 
-async function bookData() {
+async function slideData() {
     const queries = [
-        { query: '공단기', sectionId: "slider" },
-        
+        { query: '공단기', sectionId: "slider" },    
+        { query: '동물', sectionId: "new" }    
     ];
-
+    
     for (const { query, sectionId } of queries) {
         const data = await fetchBooks(query);
+        
 
         const section = document.querySelector(`#${sectionId}`);
         const boxElements = section.querySelectorAll(".swiper-slide");
@@ -46,18 +48,20 @@ async function bookData() {
 
             box.innerHTML = `<img src="${doc.thumbnail}">
                         <div class="bookinfo">
-                        <h3>${doc.title}</h3>
-                        <h6>${doc.authors}</h6>
-                        <p>${doc.contents.substring(0, 60)}</p>
-                        <button>click</button></div>
+                            <h3>${doc.title}</h3>
+                            <h6>${doc.authors}</h6>
+                            <p>${doc.contents.substring(0, 60)}</p>
+                        </div>
                         `
         });
+
 
         var swiper = new Swiper('.mySwiper', {
             navigation: {
                 nextEl: '#mainpage_page .swiper-button-next',
                 prevEl: '#mainpage_page .swiper-button-prev',
             },
+            loop: true,
             autoplay: {
         delay: 3000, // 3000ms = 3초마다 다음 슬라이드로 이동
         disableOnInteraction: false // 사용자가 버튼 클릭/스 와이프 후에도 자동 재생 유지
@@ -76,6 +80,43 @@ async function bookData() {
         });
     }
 
+
+}
+
+slideData();
+
+
+async function bookData() {
+    const queries = [
+        {query : '공무원', sectionId :"best"},
+        
+    ];
+    
+    for (const { query, sectionId } of queries) {
+        const data = await fetchBooks(query);
+        
+
+        const section = document.querySelector(`#${sectionId}`);
+        const boxElements = section.querySelectorAll(".book");
+        console.log(section, boxElements);
+
+        boxElements.forEach((box, i) => {
+            const doc = data.documents[i];
+            console.log(box, i);
+            if (!doc) return;
+
+
+            box.innerHTML = `<img src="${doc.thumbnail}">
+                        <div class="bookinfo">
+                            <div>${i+1}</div>
+                            <h3>${doc.title}</h3>
+                            <h6>${doc.authors}</h6>
+                            <p>${doc.contents.substring(0, 60)}</p>
+                        
+                        </div>
+                        `
+        });
+    }
 
 }
 
