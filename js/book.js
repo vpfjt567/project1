@@ -4,7 +4,7 @@ async function fetchBooks(query) {
     const params = new URLSearchParams({
         target: 'title',
         query,
-        size:20
+        size: 20
     })
 
     const url = `https://dapi.kakao.com/v3/search/book?${params}`
@@ -28,13 +28,13 @@ async function fetchBooks(query) {
 
 async function slideData() {
     const queries = [
-        { query: '공단기', sectionId: "slider" },    
-        { query: '동물', sectionId: "new" }    
+        { query: '공단기', sectionId: "slider" },
+
     ];
-    
+
     for (const { query, sectionId } of queries) {
         const data = await fetchBooks(query);
-        
+
 
         const section = document.querySelector(`#${sectionId}`);
         const boxElements = section.querySelectorAll(".swiper-slide");
@@ -48,8 +48,12 @@ async function slideData() {
 
             box.innerHTML = `<img src="${doc.thumbnail}">
                         <div class="bookinfo">
-                            <h3>${doc.title}</h3>
-                            <h6>${doc.authors}</h6>
+                        
+                            <h5>${doc.title}<br></h5>
+                            
+                            <h7>${doc.authors}<br></h7>
+                            
+                            <h5>${doc.sale_price}원<br></h5>
                             <p>${doc.contents.substring(0, 60)}</p>
                         </div>
                         `
@@ -63,9 +67,9 @@ async function slideData() {
             },
             loop: true,
             autoplay: {
-        delay: 3000, // 3000ms = 3초마다 다음 슬라이드로 이동
-        disableOnInteraction: false // 사용자가 버튼 클릭/스 와이프 후에도 자동 재생 유지
-    },
+                delay: 3000, // 3000ms = 3초마다 다음 슬라이드로 이동
+                disableOnInteraction: false // 사용자가 버튼 클릭/스 와이프 후에도 자동 재생 유지
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -88,13 +92,14 @@ slideData();
 
 async function bookData() {
     const queries = [
-        {query : '공무원', sectionId :"best"},
-        
+        { query: '공무원', sectionId: "best" },
+        { query: '동물', sectionId: "newbook" }
+
     ];
-    
+
     for (const { query, sectionId } of queries) {
         const data = await fetchBooks(query);
-        
+
 
         const section = document.querySelector(`#${sectionId}`);
         const boxElements = section.querySelectorAll(".book");
@@ -108,10 +113,10 @@ async function bookData() {
 
             box.innerHTML = `<img src="${doc.thumbnail}">
                         <div class="bookinfo">
-                            <div>${i+1}</div>
+                            <div>${i + 1}</div>
                             <h3>${doc.title}</h3>
                             <h6>${doc.authors}</h6>
-                            <p>${doc.contents.substring(0, 60)}</p>
+                            <h3>${doc.sale_price}원</h3>
                         
                         </div>
                         `
@@ -122,3 +127,41 @@ async function bookData() {
 
 
 bookData();
+
+async function newbookData() {
+    const queries = [
+
+        { query: '동물', sectionId: "newbook" }
+
+    ];
+
+    for (const { query, sectionId } of queries) {
+        const data = await fetchBooks(query);
+
+
+        const section = document.querySelector(`#${sectionId}`);
+        const boxElements = section.querySelectorAll(".newbook");
+        console.log(section, boxElements);
+
+        boxElements.forEach((box, i) => {
+            const doc = data.documents[i];
+            console.log(box, i);
+            if (!doc) return;
+
+
+            box.innerHTML = `<img src="${doc.thumbnail}">
+                        <div class="bookinfo">
+                        
+                            <h4>${doc.title}</h4>
+                            <p>${doc.authors}</p>
+                            <h4>${doc.sale_price}원</h4>
+                        
+                        </div>
+                        `
+        });
+    }
+
+}
+
+
+newbookData();

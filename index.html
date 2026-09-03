@@ -54,26 +54,29 @@
                 </div>
             </div>
             <hr>
-            <nav>
-                <ul>
-                    <li><a href="">공단기홈</a></li>
-                    <li><a href="">선생님</a></li>
-                    <li><a href="">수강신청</a></li>
-                    <li><a href="">시험정보</a></li>
-                    <li><a href="">이벤트</a></li>
-                    <li><a href="">교재</a></li>
-                    <li><a href="">프리패스</a></li>
-                    <li><a href="">공숲 풀서비스</a></li>
-                    <li><a href="">프리미엄 서비스</a></li>
-                    <li><a href="">7급.PSAT</a></li>
-                </ul>
-            </nav>
+            <div style="width: 100%; height: auto; border-bottom: 1px solid black;">
+                <div class="container">
+                    <nav>
+                        <ul>
+                            <li><a href="">공단기홈</a></li>
+                            <li><a href="">선생님</a></li>
+                            <li><a href="">수강신청</a></li>
+                            <li><a href="">시험정보</a></li>
+                            <li><a href="">이벤트</a></li>
+                            <li><a href="">교재</a></li>
+                            <li><a href="">프리패스</a></li>
+                            <li><a href="">공숲 풀서비스</a></li>
+                            <li><a href="">프리미엄 서비스</a></li>
+                            <li><a href="">7급.PSAT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
 
-            <hr>
         </header>
         <!-- -------------------------------------------------------------sidbanner -->
-        
+
 
         <main>
             <div class="container">
@@ -103,7 +106,7 @@
                     <div id="mainpage_page">
                         <div id="buttonpage">
                             <div id="buttonpage_p">
-                                <div style="width: 130px; height: 60px;">
+                                <div style="width: 130px; height: 60px; ">
                                     <h4>공간기 Pick! <br> 추천 교재</h4>
                                 </div>
                                 <div style="width: 180px; height: 50px;">
@@ -193,7 +196,10 @@
                                 <h3>공단기 베스트셀러></h3>
                             </li>
                             <li>
-                                <p>더보기></p>
+                                <ul>
+                                    <li><span>주간</span></li>
+                                    <li><span>월간</span></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -214,67 +220,92 @@
                     <div id="eventpage"><img src="https://un-static.conects.com/dangimall/common/logo/split_bnr.png"
                             alt="이벤트 이미지">
                     </div>
-                    <!-- --------------------------------------------------------------- -->
-                    <div id="newh3">
-                        <ul>
-                            <li>
-                                <h3>신간도서</h3>
-                            </li>
-                            <li>"<이모티콘>"</li>
-                        </ul>
-                    </div>
-
+                    <!-- ------------------------------------------------------->
                     <div id="new">
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                        <div class="swiper-slide"></div>
-                    </div>
-                </div>
+                        <div id="newh3">
+                            <ul>
+                                <li>
+                                    <h3>새로 나온 교재</h3>
+                                </li>
+                                <li>
 
-                <div id="sidebanner">
-                    <div class="stikey">
-                        <h4>최근 본 상품</h4>
-                        <div>
-                            <p>내역이 <br> 없습니다.</p>
+                                    <div id='new_slider'>
+
+                                        <div class="swiper-pagination"></div>
+                                        <div class="newbutton">
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+
+                        <div class="swiper newSwiper">
+                            <div id="newbook" class="swiper-wrapper">
+
+                                <div class="swiper-slide newbook">Slide 2</div>
+                                <div class="swiper-slide newbook">Slide 1</div>
+                                <div class="swiper-slide newbook">Slide 3</div>
+                                <div class="swiper-slide newbook">Slide 4</div>
+                                <div class="swiper-slide newbook">Slide 5</div>
+                                <div class="swiper-slide newbook">Slide 6</div>
+                                <div class="swiper-slide newbook">Slide 7</div>
+                                <div class="swiper-slide newbook">Slide 8</div>
+                                <div class="swiper-slide newbook">Slide 9</div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
 
-        
+            <div id="sidebanner">
+                <div class="stikey">
+                    <h4>최근 본 상품</h4>
+                    <div>
+                        <p>내역이 <br> 없습니다.</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
 
-        <!-- ---------------------------------------------footer -->
-        <footer>
-            <div id="footer_top">
-                <ul>
-                    <li><a href="">회사소개</a></li>
-                    <li><a href="">이용약관</a></li>
-                    <li><a href="">개인정보처리방침</a></li>
-                    <li><a href="">고객센터</a></li>
-                </ul>
-                <select name="" id="">
-                    <option value="">패밀리 사이트</option>
-                </select>
-            </div>
-            <div id="footer_bottem">
-                <p>(주)에스티유니타스</p>
-                <ul>
-                    <li>전화번호 : 1670-1419</li>
-                    <li>이메일주소 : STunitas_cs@stunitas.com</li>
-                    <li>주소 : 서울특별시 구로구 경인로 662, 15층 (신도림동, 디큐브시티 제타워동)</li>
-                </ul>
-                <ul>
-                    <li>대표이사 : 김형국</li>
-                    <li>에스티아카데미평생교육원(제1021호)</li>
-                    <li>사업자 등록번호 : 119-86-27573</li>
-                    <li>통신판매업신고 : 2022-서울구로-2373 <a href="">사용자 정보확인</a></li>
-                    <li>호스팅제공자 : © 2022, Amazon Web Services, Inc</li>
-                </ul>
-            </div>
-        </footer>
+
+
+    <!-- ---------------------------------------------footer -->
+    <footer>
+        <div id="footer_top">
+            <ul>
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="" style="text-decoration: underline; font-weight: bolder;">개인정보처리방침</a></li>
+                <li><a href="">고객센터</a></li>
+            </ul>
+            <select name="" id="footer_select">
+                <option value="">패밀리 사이트</option>
+            </select>
+        </div>
+        <div id="footer_bottem">
+            <p>(주)에스티유니타스</p>
+            <ul>
+                <li>전화번호 : 1670-1419</li>
+                <li>이메일주소 : STunitas_cs@stunitas.com</li>
+                <li>주소 : 서울특별시 구로구 경인로 662, 15층 (신도림동, 디큐브시티 제타워동)</li>
+            </ul>
+            <ul>
+                <li>대표이사 : 김형국</li>
+                <li>에스티아카데미평생교육원(제1021호)</li>
+                <li>사업자 등록번호 : 119-86-27573</li>
+                <li>통신판매업신고 : 2022-서울구로-2373 <a href="" style="text-decoration: underline;">사용자 정보확인</a></li>
+                <li>호스팅제공자 : © 2022, Amazon Web Services, Inc</li>
+            </ul>
+        </div>
+    </footer>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
@@ -296,6 +327,23 @@
                 delay: 3000, // 3000ms = 3초마다 다음 슬라이드로 이동
                 disableOnInteraction: false // 사용자가 버튼 클릭/스 와이프 후에도 자동 재생 유지
             },
+
+        });
+
+        var swiper = new Swiper('.newSwiper', {
+            loop: true,
+            slidesPerView: 5,
+            spaceBetween: 30,
+            pagination: {
+                el: '#new .swiper-pagination',
+                type: 'fraction',
+
+            },
+            navigation: {
+                nextEl: '#new .swiper-button-next',
+                prevEl: '#new .swiper-button-prev',
+            },
+
 
         });
     </script>
