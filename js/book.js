@@ -165,3 +165,25 @@ async function newbookData() {
 
 
 newbookData();
+
+
+//tab menu
+const tabItems = document.querySelectorAll('#booktab li')
+const tabs = document.querySelectorAll("#best > div")
+
+tabItems.forEach((tab, i) => {
+    tab.addEventListener('click', (e) => {
+        // tablistbold
+        tabItems.forEach((tab)=> {
+            tab.classList.remove('active');
+        });        
+        e.target.classList.add('active');
+
+        tabs.forEach((tab, j) => {
+            tab.style.display = (i === j) ? 'flex' : 'none';
+        })
+    })
+})
+
+
+
