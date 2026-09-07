@@ -1,21 +1,52 @@
 #chapter {width: 100%; height: 40px; background-color: antiquewhite;}
+#chapter ul{display: flex; justify-content: flex-start;}
+#chapter li::after{content: ">"; margin: 0 10px;}
+#chapter li:last-child::after {display: none;}
+
 
 #submain {width: 100%; height: 540px; background-color: blue;}
+#submain>ul{display: flex; justify-content: space-between;}
+#submainimgpage{width: 500px; height: 535px; background-color: #F6F6F9;}
+#submainimgpage img{width: 250px; height: 345px; background-color: black;}
+#mainimg {width: 100%; height: 90%; display: flex; justify-content: center; align-items: center;}
+#mainbutton{width: 100%; height: 10%; background-color: blue; display: flex; justify-content: center; align-items: center }
+#mainbutton button {margin: 0 5px;}
+#submaintextpage{ width: 610px; height: 540px; background-color: aqua;}
+#submaintextpage ul{width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-around;} 
+.pagetext{width: 100%; height: auto; background-color: aquamarine;}
 
-#newbook{width: 100%; height: 245px; background-color: aquamarine;}
+/* ____________________________________________________________newbookslider */
+
+
+#newbook{width: 100%; height: 245px; background-color: fuchsia;}
+#newbooktext ul {width: 100%; height:60px; background-color: antiquewhite;
+display: flex; justify-content: space-between; align-items: center;}
+#newbooktext ul li{width: auto; height: auto; margin: 0 10px; background-color: blueviolet;}
+#slider{width: 100%; height: 185px;  position: relative;}
+#slider .swiper-button-next{width: 45px; height: 45px; border: 1px solid #F6F6F9;  border-radius: 50%; color: gray;  position: absolute; right: -25px; background-color: white;}
+#slider .swiper-button-prev{width: 45px; height: 45px; border: 1px solid #F6F6F9;  border-radius: 50%; color: gray; position: absolute;left: -25px; background-color: white;}
+#slider img {width: 100px; height: 140px;}
+.subnew_book{width: 565px; height: 185px; display: contents; justify-content: space-between;}
+.subnewbookimg {width: 155px; height: 185px;background-color: #F6F6F9;border-radius: 10px; display: flex; justify-content: center;align-items: center;}
+.subnewbookinfo{width: 385px; height: 185px;}
+
 /* ----------------------------------------------------subpage */
-#subpage{width: 100%; height: auto; background-color: brown; display: flex;justify-content: space-between;}
+
+#subpage{width: 100%; height: auto; background-color: brown; display: flex;justify-content: space-between; position: relative; }
+
 
 #sub1page{ width: 750px; height: auto; }
-#fixed{width: 100%; height: 55px;background-color: bisque;}
 
-#fixed2{width: 360px; height: 100%; background-color: aqua; }
+#fixed{width: 100%; height: 55px;background-color: bisque; position: sticky; top: 0;}
 
-#fixedblok{ width: 100%; height: 245px; background-color: blueviolet;} 
+#fixed2{width: 360px; height: 1000px; background-color: black; position: relative;}
 
+#fixedblok{ width: 100%; height: 245px; background-color: blueviolet; position: sticky; top:0;} 
+/* -------------------------------------------------------------- */
 .h2 {width: 100%; height: 30px;}
 
-#person {width: 100%; height: 180px; background-color: aqua;}
+#person {width: 100%; height: 180px; background-color: aqua; border: 1px solid #F6F6F9; border-radius: 8px;}
+#person img {width: 55px; height: 55px; border-radius: 50%;}
 #BookIntroduction{width: 100%; height: auto;}
 #BookIntroduction p{width: 100%;height: 105px; background-color: red; }
 #BookIntroduction img{width: 100%; height: 180px; background-color: black;}
@@ -24,3 +55,7 @@
 #reviewmaking{width: 100%; height: 40px; background-color: olive;}
 #reviewbox{width: 100%; height: 160px; background-color: hotpink;}
 #reviewtop{width: 100%; height: 70px; background-color: palegreen;}
+#reciewtext{width: 100%; height: 270px; background-color: blue;}
+#split {width: 100%; height:245px ; background-color: blanchedalmond;}
+
+#delivery{width: 100%; height: 400px; background-color: aquamarine;}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>단기북스</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
 
@@ -74,228 +74,400 @@
         </header>
         <!-- ----------------------------------------------header -->
         <div class="subcontainer">
-            <div id="chapter"></div>
+            <div id="chapter">
+                <ul>
+                    <li>공단기</li>
+                    <li>단기북스</li>
+                    <li>국어</li>
+                </ul>
+            </div>
 
             <div id="submain">
                 <ul>
-                    <li></li>
-                    <li>
+                    <li id="submainimgpage">
+
+                        <div id="mainimg"> <img src="" alt=""></div>
+
+                        <div id="mainbutton"><button>크게보기</button> <button>미리보기</button></div>
+
+
+                    </li>
+                    <li id="submaintextpage">
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li class="pagetext">
+                                <ul>
+                                    <li><span>추천</span> <span>사은품</span></li>
+                                    <li>
+                                        <ul>
+                                            <li>title</li>
+                                            <li>공단기 월간 베스트셀러 4위</li>
+                                            <li>공단기 주간 베스트셀러 3위</li>
+                                            <li>별점</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="mainprice" class="pagetext"> 가격</li>
+                            <li id="radiobox" class="pagetext">
+                                <ul>
+                                    <li>
+                                        <ul>
+                                            <li><input type="radio"></li>
+                                            <li>분철신청</li>
+                                            <li>이모지</li>
+                                        </ul>
+                                    </li>
+                                    <li>1pcs(+1,500원)</li>
+                                </ul>
+                            </li>
+                            <li id="bookdetail" class="pagetext">
+                                <ul>
+                                    <li>
+                                        <ul>
+                                            <li>배송비</li>
+                                            <li></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>저자 o</li>
+                                            <li></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>출판사o</li>
+                                            <li></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>등록일o</li>
+                                            <li></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="totalprice" class="pagetext">
+                                <ul>
+                                    <li>
+                                        <h3>총 상품의 금액</h3>
+                                    </li>
+                                    <li>가격</li>
+                                </ul>
+                            </li>
+
+                            <li id="btn" class="pagetext">
+                                <ul>
+                                    <li>장바구니</li>
+                                    <li>바로 구매하기</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </div>
+            <!-- -----------------------------------------------------submainpage -->
 
-
-            <div id="newbook">
-                <div>
+            <div id="subnewbook">
+                <div id="newbooktext">
                     <ul>
-                        <li>선생님 신규교제</li>
-                        <li>알림창</li>
+                        <li>
+                            <h3>선생님 신규교제</h3>
+                        </li>
+                        <li><span>이모지</span><span>이선재 선생님 신간 알림 받기</span></li>
                     </ul>
                 </div>
-                <div>슬라이더</div>
-            </div>
-<!-- ------------------------------------------------subtectpage -->
-            <div id="subpage">
-                <div id="sub1page">
-                    <div id="fixed">
-                        <ul>
-                            <li>상품정보</li>
-                            <li>교재 후기</li>
-                            <li>분철 안내</li>
-                            <li>배송/교환/반품</li>
-                        </ul>
+
+                <div id="slider">
+                    <div class="swiper newbookSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide subnew_book">Slide 1</div>
+                            <div class="swiper-slide subnew_book">Slide 2</div>
+                            <div class="swiper-slide subnew_book">Slide 3</div>
+                            <div class="swiper-slide subnew_book">Slide 4</div>
+                            <div class="swiper-slide subnew_book">Slide 5</div>
+                            <div class="swiper-slide subnew_book">Slide 6</div>
+                            <div class="swiper-slide subnew_book">Slide 7</div>
+                            <div class="swiper-slide subnew_book">Slide 8</div>
+                            <div class="swiper-slide subnew_book">Slide 9</div>
+                        </div>
+                      
+
                     </div>
-<!-- ----------------------------------------------책소개 -->
-                    <div id="subtextpage">
-                        <div class="h2">
-                            <h2>이 교재를 사용하는 강좌</h2>
-                        </div>
-
-                        <div id="person">
+                      <div class="swiper-button-next"></div>
+                     <div class="swiper-button-prev"></div>
+                     
+                </div>
+                <!-- ------------------------------------------------subtectpage -->
+                <div id="subpage">
+                    <div id="sub1page">
+                        <div id="fixed">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li>상품정보</li>
+                                <li>교재 후기</li>
+                                <li>분철 안내</li>
+                                <li>배송/교환/반품</li>
                             </ul>
                         </div>
-                        <div class="h2">
-                            <h2>책소개</h2>
-                        </div>
-
-                        <div id="BookIntroduction">
-                            <ul>
-                                <li>
-                                    <p>『심슨 영어』 기본서 시리즈는 개편된 공무원 영어 시험 출제 기조를 반영하여 ‘지엽 탈피’와 ‘민간 어학 시험 반영’이라는 두 방향성을 중점으로
-                                        두었다. 이 중 『심슨 독해』는 『심슨 영어』의 세 번째 기본서로, 특히 개편된 시험에서 새롭게 출제되는 실용문(이메일, 안내문, 웹페이지)
-                                        유형에 대한 대비뿐만 아니라 학술문 유형에 대한 기본기도 철저하게 다질 수 있도록 했다. 『심슨 독해』는 문제 유형에 대한 실전적인 맞춤형 독해
-                                        전략을 제공한다. 독해 문항을 풀 때 항상 시간이 부족한 학생, 뜻 해석은 되지만 글의 의도를 파악하는 것이 어려운 학생, 완벽히 해석하지
-                                        않아도 글의 구조를 통해 글의 핵심을 잡아내고자 하는 학생 모두 『심슨 독해』를 통해 도움을 받을 수 있을 것이다. 이처럼 신경향 공무원 영어
-                                        독해에 대한 대비는 『심슨 독해』 한 권으로 충분하다.</p>
-                                </li>
-                                <li><img src="" alt=""></li>
-                                <li>
-                                    <div id="span"><span>펼치기</span></div>
-                                </li>
-                            </ul>
-                        </div>
-<!-- -------------------------------------------------책후기 -->
-                        <div id="BookIntroductionindex">
-                            <ul>
-                                <li>
-                                    <ul>
-                                        <li>
-                                            <p>목차</p>
-                                        </li>
-                                        <li></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul>
-                                        <li>츌판사 서평</li>
-                                        <li></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul>
-                                        <li>품목정보</li>
-                                        <li></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div id="review">
+                        <!-- ----------------------------------------------책소개 -->
+                        <div id="subtextpage">
                             <div class="h2">
-                                <h2>후기(1)</h2>
+                                <h2>이 교재를 사용하는 강좌</h2>
                             </div>
 
-                            <div id="reviewmaking">
+                            <div id="person">
+                                <ul>
+                                    <li><img src="https://un-static.conects.com/un_static/img/teacher/teacher_img/B_456.png" alt=""> <span>이선재</span></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="h2">
+                                <h2>책소개</h2>
+                            </div>
+
+                            <div id="BookIntroduction">
                                 <ul>
                                     <li>
-                                        <p>이 책의 어떤 점이 가장 도움이 되었나요?
-                                            회원님의 소중한 생각을 나눌 수 있는 후기를 작성해 주세요!</p>
+                                        <p>『심슨 영어』 기본서 시리즈는 개편된 공무원 영어 시험 출제 기조를 반영하여 ‘지엽 탈피’와 ‘민간 어학 시험 반영’이라는 두 방향성을
+                                            중점으로
+                                            두었다. 이 중 『심슨 독해』는 『심슨 영어』의 세 번째 기본서로, 특히 개편된 시험에서 새롭게 출제되는 실용문(이메일, 안내문,
+                                            웹페이지)
+                                            유형에 대한 대비뿐만 아니라 학술문 유형에 대한 기본기도 철저하게 다질 수 있도록 했다. 『심슨 독해』는 문제 유형에 대한 실전적인
+                                            맞춤형 독해
+                                            전략을 제공한다. 독해 문항을 풀 때 항상 시간이 부족한 학생, 뜻 해석은 되지만 글의 의도를 파악하는 것이 어려운 학생, 완벽히
+                                            해석하지
+                                            않아도 글의 구조를 통해 글의 핵심을 잡아내고자 하는 학생 모두 『심슨 독해』를 통해 도움을 받을 수 있을 것이다. 이처럼 신경향 공무원
+                                            영어
+                                            독해에 대한 대비는 『심슨 독해』 한 권으로 충분하다.</p>
                                     </li>
-                                    <li><button>(미모지)후기작성</button></li>
+                                    <li><img src="" alt=""></li>
+                                    <li>
+                                        <div id="span"><span>펼치기</span></div>
+                                    </li>
                                 </ul>
                             </div>
-
-
-                            <div id="reviewbox">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-
-
-                            <div id="reviewtop">
+                            <!-- -------------------------------------------------책후기 -->
+                            <div id="BookIntroductionindex">
                                 <ul>
                                     <li>
                                         <ul>
                                             <li>
-                                                <div>전체후기</div>
+                                                <p>목차</p>
                                             </li>
-                                            <li>
-                                                <div>일반후기</div>
-                                            </li>
-                                            <li>
-                                                <div>분철후기</div>
-                                            </li>
+                                            <li></li>
                                         </ul>
                                     </li>
-                                    <li><select name="" id="">
-                                            <option value="">최신순</option>
-                                            <option value="">평점 높은 순</option>
-                                            <option value="">평점 낮은 순</option>
-                                        </select></li>
+                                    <li>
+                                        <ul>
+                                            <li>츌판사 서평</li>
+                                            <li></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>품목정보</li>
+                                            <li></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
 
+                            <div id="review">
+                                <div class="h2">
+                                    <h2>후기(1)</h2>
+                                </div>
 
+                                <div id="reviewmaking">
+                                    <ul>
+                                        <li>
+                                            <p>이 책의 어떤 점이 가장 도움이 되었나요?
+                                                회원님의 소중한 생각을 나눌 수 있는 후기를 작성해 주세요!</p>
+                                        </li>
+                                        <li><button>(미모지)후기작성</button></li>
+                                    </ul>
+                                </div>
+
+
+                                <div id="reviewbox">
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+
+
+                                <div id="reviewtop">
+                                    <ul>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <div>전체후기</div>
+                                                </li>
+                                                <li>
+                                                    <div>일반후기</div>
+                                                </li>
+                                                <li>
+                                                    <div>분철후기</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><select name="" id="">
+                                                <option value="">최신순</option>
+                                                <option value="">평점 높은 순</option>
+                                                <option value="">평점 낮은 순</option>
+                                            </select></li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+                            <div id="reviewtext">
+                                <이모지> 등록된 후기가 없습니다.
+                            </div>
+
+                            <div id="split">
+                                <h2>분철 유의사항</h2>
+                                <ul>
+                                    <li>분철 도서는 주문하신 후 4일 이내에 출고됩니다. (평일 기준)</li>
+                                    <li>예약 판매 도서 등 보유 재고가 없는 도서는 배송이 지연될 수 있습니다.</li>
+                                    <li>PCS 숫자는 스프링 작업 권 수 숫자 입니다. 450페이지가 넘는 경우 분권 됩니다.(단 표지 및 본문 두께에 따라 분권 페이지수가 변경 될
+                                        수
+                                        있습니다.)</li>
+                                    <li>분철 서비스는 본 교재가 60페이지 이상인 경우 신청이 가능합니다.</li>
+                                    <li>분권되는 지점 선택/지정 불가합니다.</li>
+                                    <li>정답해설지는 두께와 제본 상태에 따라 스프링작업이 제외될 수 있습니다.</li>
+                                    <li>분철 작업에는 투명 표지와 철제 와이어링이 사용됩니다.</li>
+                                    <li>분철 도서와 일반 도서를 함께 구매할 경우 분철 도서의 작업 완료일에 맞춰 일괄 출고됩니다. (예약 도서 제외)</li>
+                                    <li>재단, 타공 등 과정을 거치는 분철 상품 특성 상 분철 도서는 작업 시작 후 취소/반품/환불하실 수 없습니다. (택배 접수 제한 지역 포함)
+                                    </li>
+                                    <li>주문완료 후 작업 시작 전 (운송장 출력 전) 마이페이지 > 주문/ 배송내역 페이지에서 직접 취소 가능합니다.</li>
+                                </ul>
+                            </div>
+
+                            <div id="delivery">
+
+
+                                <div>
+                                    <h2>배송/교환/반품 </h2>
+
+                                    <ul>
+                                        <li>분철 도서는 주문하신 후 4일 이내에 출고됩니다. (평일 기준)</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h2>교환 규정</h2>
+                                    <ul>
+                                        <li>수령 후 90일 이내 주문 상품에 대해 상품의 결함으로 판매자와 협의된 경우 신청 가능합니다. (해외배송 상품 불가)</li>
+                                        <li>구매한 도서와 동일한 상품으로만 교환 가능합니다. (분철 옵션 추가 혹은 삭제, 다른 상품으로 변경 불가)</li>
+                                        <li>분철 불량의 경우 1:1 문의 게시판에 사진을 등록해주시면 빠른 확인이 가능합니다.</li>
+                                        <li>재 발송 도서의 수급 일정에 따라 반품 진행이 먼저 될 수 있습니다.</li>
+                                        <li>교환 도서가 수급 불가한 경우 환불로 진행 될 수 있습니다.</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h2>반품 규정</h2>
+                                    <ul>
+                                        <li>수령 후 10일 이내에 신청이 가능합니다. (해외배송 상품 불가)</li>
+                                        <li>사은품이 포함 된 상품 반품 시에는 사은품을 함께 동봉하여 반품해 주셔야 합니다.</li>
+                                        <li>사용하거나 랩핑(비닐포장)제거한 경우, 분철한 도서의 경우는 반품이 불가합니다.</li>
+                                        <li>분철 불량의 경우 사진촬영 후 1:1 문의 게시판을 통해 문의 부탁드립니다.</li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
                         </div>
-
-
-
-
-
                     </div>
+
+                    <!-- -------------------------------------------------------between -->
+                    <div id="fixed2">
+                        <div id="fixedblok">
+                            <ul>
+                                <li>
+                                    <div></div>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <div></div>
+                                    <div></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
 
- <!-- -------------------------------------------------------between -->
-                <div id="fixed2">
-                    <div id="fixedblok">
-                        <ul>
-                            <li>
-                                <div></div>
-                                <div></div>
-                            </li>
-                            <li>
-                                <div></div>
-                                <div></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
             </div>
 
+
+            <!-- ------------------------------------------------footer -->
+            <footer>
+                <div id="footer_top">
+                    <ul>
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="" style="text-decoration: underline; font-weight: bolder;">개인정보처리방침</a></li>
+                        <li><a href="">고객센터</a></li>
+                    </ul>
+                    <select name="" id="footer_select">
+                        <option value="">패밀리 사이트</option>
+                        <option value="">공단기</option>
+                        <option value="">기술단기</option>
+                        <option value="">소방단기</option>
+                        <option value="">한능검단기</option>
+                    </select>
+                </div>
+                <div id="footer_bottem">
+                    <p>(주)에스티유니타스</p>
+                    <ul>
+                        <li>전화번호 : 1670-1419</li>
+                        <li>이메일주소 : STunitas_cs@stunitas.com</li>
+                        <li>주소 : 서울특별시 구로구 경인로 662, 15층 (신도림동, 디큐브시티 제타워동)</li>
+                    </ul>
+                    <ul>
+                        <li>대표이사 : 김형국</li>
+                        <li>에스티아카데미평생교육원(제1021호)</li>
+                        <li>사업자 등록번호 : 119-86-27573</li>
+                        <li>통신판매업신고 : 2022-서울구로-2373 <a href="" style="text-decoration: underline;">사용자 정보확인</a></li>
+                        <li>호스팅제공자 : © 2022, Amazon Web Services, Inc</li>
+                    </ul>
+                </div>
+            </footer>
 
         </div>
 
 
-        <!-- ------------------------------------------------footer -->
-        <footer>
-            <div id="footer_top">
-                <ul>
-                    <li><a href="">회사소개</a></li>
-                    <li><a href="">이용약관</a></li>
-                    <li><a href="" style="text-decoration: underline; font-weight: bolder;">개인정보처리방침</a></li>
-                    <li><a href="">고객센터</a></li>
-                </ul>
-                <select name="" id="footer_select">
-                    <option value="">패밀리 사이트</option>
-                    <option value="">공단기</option>
-                    <option value="">기술단기</option>
-                    <option value="">소방단기</option>
-                    <option value="">한능검단기</option>
-                </select>
-            </div>
-            <div id="footer_bottem">
-                <p>(주)에스티유니타스</p>
-                <ul>
-                    <li>전화번호 : 1670-1419</li>
-                    <li>이메일주소 : STunitas_cs@stunitas.com</li>
-                    <li>주소 : 서울특별시 구로구 경인로 662, 15층 (신도림동, 디큐브시티 제타워동)</li>
-                </ul>
-                <ul>
-                    <li>대표이사 : 김형국</li>
-                    <li>에스티아카데미평생교육원(제1021호)</li>
-                    <li>사업자 등록번호 : 119-86-27573</li>
-                    <li>통신판매업신고 : 2022-서울구로-2373 <a href="" style="text-decoration: underline;">사용자 정보확인</a></li>
-                    <li>호스팅제공자 : © 2022, Amazon Web Services, Inc</li>
-                </ul>
-            </div>
-        </footer>
-
-    </div>
 
 
 
 
 
 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
+        <script src="./js/sub.js"></script>
+        <script src="./js/book.js"></script>
+        <script>
+            var swiper = new Swiper('.newbookSwiper', {
+                navigation: {
+                    nextEl: '#slider .swiper-button-next',
+                    prevEl: '#slider .swiper-button-prev',
+                },
+                slidesPerView: 2,
+                loop: true,
+                spaceBetween: 30,
+                pagination: {
 
+                    clickable: true,
+                },
+            });
+        </script>
 
-    <script src="./js/sub.js"></script>
 </body>
 
 </html>

@@ -167,6 +167,43 @@ async function newbookData() {
 newbookData();
 
 
+async function subnewData() {
+    const queries = [
+        { query: '수학', sectionId: "subnewbook" },
+        
+
+    ];
+
+    for (const { query, sectionId } of queries) {
+        const data = await fetchBooks(query);
+
+
+        const section = document.querySelector(`#${sectionId}`);
+        const boxElements = section.querySelectorAll(".subnew_book");
+        console.log(section, boxElements);
+
+        boxElements.forEach((box, i) => {
+            const doc = data.documents[i];
+            console.log(box, i);
+            if (!doc) return;
+
+
+            box.innerHTML = `<div class="subnewbookimg"><img src="${doc.thumbnail}"></div>
+                        <div class="subnewbookinfo">
+                            <div>${i + 1}</div>
+                            <h3>${doc.title}</h3>
+                            <h6>${doc.authors}</h6>
+                            <h3>${doc.sale_price}원</h3>
+                        
+                        </div>
+                        `
+        });
+    }
+
+}
+
+subnewData()
+
 //tab menu
 const tabItems = document.querySelectorAll('#booktab li')
 const tabs = document.querySelectorAll("#best > div")
