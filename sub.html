@@ -82,11 +82,12 @@
                 </ul>
             </div>
 
-            <div id="submain">
-                <ul>
+            <div id="submain" class="submainapi">
+                
+                <!-- <ul>
                     <li id="submainimgpage">
 
-                        <div id="mainimg"> <img src="" alt=""></div>
+                        <div id="mainimg"> <img src="${doc.thumbnail}" alt="책 이미지"></div>
 
                         <div id="mainbutton"><button>크게보기</button> <button>미리보기</button></div>
 
@@ -99,7 +100,7 @@
                                     <li><span>추천</span> <span>사은품</span></li>
                                     <li>
                                         <ul>
-                                            <li>title</li>
+                                            <li><h3>${doc.title}</h3></li>
                                             <li>공단기 월간 베스트셀러 4위</li>
                                             <li>공단기 주간 베스트셀러 3위</li>
                                             <li>별점</li>
@@ -107,7 +108,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li id="mainprice" class="pagetext"> 가격</li>
+                            <li id="mainprice" class="pagetext"><h3>${doc.sale_price}원</h3></li>
                             <li id="radiobox" class="pagetext">
                                 <ul>
                                     <li>
@@ -125,24 +126,25 @@
                                     <li>
                                         <ul>
                                             <li>배송비</li>
+                                            <li><h6>3,000원</h6><br>
+                                            <p>20,000원 이상 구매시 무료배송</p></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><p>${doc.authors}</p></li>
                                             <li></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <ul>
-                                            <li>저자 o</li>
+                                            <li><p>${doc.publisher}</p></li>
                                             <li></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <ul>
-                                            <li>출판사o</li>
-                                            <li></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li>등록일o</li>
+                                            <li><h6>${doc.datetime}</h6></li>
                                             <li></li>
                                         </ul>
                                     </li>
@@ -153,19 +155,20 @@
                                     <li>
                                         <h3>총 상품의 금액</h3>
                                     </li>
-                                    <li>가격</li>
+                                    <li><h3>${doc.sale_price}원</h3></li>
                                 </ul>
                             </li>
 
                             <li id="btn" class="pagetext">
                                 <ul>
-                                    <li>장바구니</li>
-                                    <li>바로 구매하기</li>
+                                    <li><span>장바구니</span></li>
+                                    <li><span>바로 구매하기</span></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                </ul>
+                </ul> -->
+                
             </div>
             <!-- -----------------------------------------------------submainpage -->
 
@@ -219,55 +222,50 @@
                             <div id="person">
                                 <ul>
                                     <li><img src="https://un-static.conects.com/un_static/img/teacher/teacher_img/B_456.png" alt=""> <span>이선재</span></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div class="h2">
-                                <h2>책소개</h2>
-                            </div>
+                                    <ul id="persontext">
+                                        <li><p>[패키지] 2027 이유진 국어 독해 알고리즘 기출분석/개념훈련/유형훈련</p><span>></span></li>
+                                        <li><p>[기출] 2027 이유진 국어 독해 알고리즘 기출 분석</p><span>></span></li>
+                                    </ul>
 
-                            <div id="BookIntroduction">
-                                <ul>
-                                    <li>
-                                        <p>『심슨 영어』 기본서 시리즈는 개편된 공무원 영어 시험 출제 기조를 반영하여 ‘지엽 탈피’와 ‘민간 어학 시험 반영’이라는 두 방향성을
-                                            중점으로
-                                            두었다. 이 중 『심슨 독해』는 『심슨 영어』의 세 번째 기본서로, 특히 개편된 시험에서 새롭게 출제되는 실용문(이메일, 안내문,
-                                            웹페이지)
-                                            유형에 대한 대비뿐만 아니라 학술문 유형에 대한 기본기도 철저하게 다질 수 있도록 했다. 『심슨 독해』는 문제 유형에 대한 실전적인
-                                            맞춤형 독해
-                                            전략을 제공한다. 독해 문항을 풀 때 항상 시간이 부족한 학생, 뜻 해석은 되지만 글의 의도를 파악하는 것이 어려운 학생, 완벽히
-                                            해석하지
-                                            않아도 글의 구조를 통해 글의 핵심을 잡아내고자 하는 학생 모두 『심슨 독해』를 통해 도움을 받을 수 있을 것이다. 이처럼 신경향 공무원
-                                            영어
-                                            독해에 대한 대비는 『심슨 독해』 한 권으로 충분하다.</p>
-                                    </li>
-                                    <li><img src="" alt=""></li>
-                                    <li>
-                                        <div id="span"><span>펼치기</span></div>
-                                    </li>
                                 </ul>
                             </div>
+                            
+
+                       
+                               
+                                        <p id="memo"></p>
+                        
+                        
                             <!-- -------------------------------------------------책후기 -->
                             <div id="BookIntroductionindex">
-                                <ul>
-                                    <li>
+                                <ul class="accordion-container"
+>
+                                    <li >
                                         <ul>
-                                            <li>
+                                            <li class="accordion-header">
                                                 <p>목차</p>
                                             </li>
-                                            <li></li>
+                                            <li class="accordion-content"><i id='index'></i></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <ul>
-                                            <li>츌판사 서평</li>
-                                            <li></li>
+                                            <li class="accordion-header">츌판사 서평</li>
+                                            <li><i id="index2" class="accordion-content"></i></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <ul>
-                                            <li>품목정보</li>
-                                            <li></li>
+                                            <li class="accordion-header">품목정보</li>
+                                            <li class="accordion-content">
+                                                <ul>
+                                                    <li class="isbn"> <span>ISBN</span><span>
+                                                            9791169665988</span> <span>
+                                                            페이지</span><span>256쪽</span></li>
+                                                    <li class="isbn"><span>판형</span><span>규외 (210 X 264 X 0 mm)</span><span>무게</span><span>0g</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -281,7 +279,7 @@
                                 <div id="reviewmaking">
                                     <ul>
                                         <li>
-                                            <p>이 책의 어떤 점이 가장 도움이 되었나요?
+                                            <p>이 책의 어떤 점이 가장 도움이 되었나요?<br>
                                                 회원님의 소중한 생각을 나눌 수 있는 후기를 작성해 주세요!</p>
                                         </li>
                                         <li><button>(미모지)후기작성</button></li>
@@ -299,34 +297,27 @@
 
                                 <div id="reviewtop">
                                     <ul>
-                                        <li>
-                                            <ul>
-                                                <li>
-                                                    <div>전체후기</div>
-                                                </li>
-                                                <li>
-                                                    <div>일반후기</div>
-                                                </li>
-                                                <li>
-                                                    <div>분철후기</div>
-                                                </li>
-                                            </ul>
+                                        <li><span class="tab-btn">전체 후기</span>
+                                        <span class="tab-btn">일반 후기</span>
+                                        <span class="tab-btn">분철 후기</span>
                                         </li>
-                                        <li><select name="" id="">
+                                        
+                                        
+                                        <li> <select name="" id="">
                                                 <option value="">최신순</option>
                                                 <option value="">평점 높은 순</option>
                                                 <option value="">평점 낮은 순</option>
                                             </select></li>
                                     </ul>
+                                    <div id="tabcontent">
+                                        <div class="tab-content"><h3>등록된 후기가 없습니다. 1</h3></div>
+                                        <div class="tab-content"><h3>등록된 후기가 없습니다. 2</h3></div>
+                                        <div class="tab-content"><h3>등록된 후기가 없습니다. 3</h3></div>
+                                    </div>
+                                           
                                 </div>
 
-
-                            </div>
-
-                            <div id="reviewtext">
-                                <이모지> 등록된 후기가 없습니다.
-                            </div>
-
+                                
                             <div id="split">
                                 <h2>분철 유의사항</h2>
                                 <ul>
