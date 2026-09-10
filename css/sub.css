@@ -1,7 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #chapter {
     width: 100%;
     height: 40px;
-    background-color: antiquewhite;
+   margin-top: 15px;
 }
 
 #chapter ul {
@@ -22,7 +26,7 @@
 #submain {
     width: 100%;
     height: 540px;
-    background-color: blue;
+   
 }
 
 #submain>ul {
@@ -39,7 +43,7 @@
 #submainimgpage img {
     width: 250px;
     height: 345px;
-    background-color: black;
+    
 }
 
 #mainimg {
@@ -48,25 +52,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 #mainbutton {
     width: 100%;
     height: 10%;
-    background-color: blue;
+
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    
 }
 
-#mainbutton button {
+#mainbutton button {padding: 10px;
     margin: 0 5px;
+    margin-bottom: 60px;
 }
 
 #submaintextpage {
     width: 610px;
     height: 540px;
-    background-color: aqua;
+   
 }
 
 #submaintextpage ul {
@@ -80,7 +87,7 @@
 .pagetext {
     width: 100%;
     height: auto;
-    background-color: aquamarine;
+   
 }
 
 /* ____________________________________________________________newbookslider */
@@ -89,13 +96,13 @@
 #newbook {
     width: 100%;
     height: 245px;
-    background-color: fuchsia;
+   
 }
 
 #newbooktext ul {
     width: 100%;
     height: 60px;
-    background-color: antiquewhite;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,7 +112,7 @@
     width: auto;
     height: auto;
     margin: 0 10px;
-    background-color: blueviolet;
+  
 }
 
 #slider {
@@ -177,12 +184,13 @@ span {
 #subpage {
     width: 100%;
     height: auto;
-    background-color: brown;
+   
     display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-
+    
+} 
+.submainapi {width: 100%; height: 100%;}
+.submainapi > ul {width: 100%; height: 100%; display: flex; justify-content: space-between; 
+     position: relative;}
 
 #sub1page {
     width: 750px;
@@ -192,16 +200,19 @@ span {
 #fixed {
     width: 100%;
     height: 55px;
-    background-color: bisque;
+    background-color: white;
     position: sticky;
     top: 0;
+    border-bottom: 1px solid black;
 }
+#fixed ul{width: 100%; height: 100%; display: flex; align-items: center; gap: 10px; margin-left: 10px; font-size: medium; font-weight: bold;}
+
 
 #fixed2 {
     width: 360px;
     height: 1500px;
     background-color: black;
-    position: relative;
+    /* position: relative; */
 }
 
 #fixedblok {
@@ -221,10 +232,21 @@ span {
 #person {
     width: 100%;
     height: 180px;
-    background-color: aqua;
-    border: 1px solid #F6F6F9;
+    margin-top: 20px;
+    border: 1px solid #EDEDF3;
     border-radius: 8px;
 }
+
+#person ul {
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+#person ul li:not(:first-child){ display: flex; justify-content: space-between;}
 
 #person img {
     width: 55px;
@@ -235,17 +257,18 @@ span {
 #memo {
     width: 100%;
     height: auto;
-    background-color: red;
+   
 }
 
-#BookIntroductionindex {
-    width: 100%;
-    height: 145px;
-    background-color: gold;
-}
 
+.accordion-container{width: 100%; height: auto; border-top: 1px solid #EDEDF3;}
+
+.accordion-header {width: 100%; height: auto; margin: 10px 0; border-bottom: 1px solid #EDEDF3; cursor: pointer;}
 .accordion-content {
     display: none;
+}
+.accordion-item.active .accordion-content {
+  display: block;
 }
 
 .isbn {
@@ -253,13 +276,13 @@ span {
     height: auto;
     display: flex;
     justify-content: space-around;
-    background-color: blue;
+    
 }
 
 #reviewmaking {
     width: 100%;
     height: 40px;
-    background-color: olive;
+    
 }
 
 #reviewmaking ul {
@@ -282,7 +305,7 @@ span {
 #reviewtop {
     width: 100%;
     height: auto;
-    background-color: palegreen;
+    
 }
 
 #reviewtop>ul {
@@ -303,29 +326,48 @@ span {
     margin: 10px;
     border: 1px solid #F6F6F9;
     border-radius: 25px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-#tabcontent{   width: 750px;
+#tabcontent {
+    width: 750px;
     height: 240px;
-    background-color: purple;
-    position: relative;}
-.tab-content {width: 100%; height: 100%; position: absolute; display: flex;
-    justify-content: center; align-items: center; 
- 
+  
+
+    position: relative;
 }
 
+.tab-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #EDEDF3;
+    
+
+}
+
+
+.tab-content:not(:first-child){
+    display: none;
+}
 
 
 #split {
     width: 100%;
-    height: 245px;
-    background-color: blanchedalmond;
+    height: auto;
+  
 }
+
+#split ul{list-style: disc; padding: 20px;}
 
 #delivery {
     width: 100%;
     height: 400px;
-    background-color: aquamarine;
+   
 }
 
 

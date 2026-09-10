@@ -1,4 +1,3 @@
-
 async function fetchBooks(query) {
     const REST_API_KEY = "fabf0d15ab33e4263ed790e6c0483958";
     const params = new URLSearchParams({
@@ -127,7 +126,7 @@ async function bookData() {
 
 
 bookData();
-
+ 
 async function newbookData() {
     const queries = [
 
